@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div th:each="cookie: ${cookies}">
+	<span th:text="${cookie.cookieId}"></span>
+	<br/>
+	<span th:text="${cookie.cookieName}"></span>
+	<br/>
+	<!--<span th:text="${cookie.image}"></span>
+	<br/>-->
+	<span th:text="${cookie.price}"></span>
+	<br/>
+	<span th:text="${cookie.cookieDescription}"></span>
+	<br/>
+	<a href=#>Add to Cart</a>
+	<br/><br/>
+</div>
+
+
+
+</body>
+</html>

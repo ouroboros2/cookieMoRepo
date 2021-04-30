@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<form th:action="@{/saveCookie}" method="post" th:object="${cookie}">
+		<p>Name: <input type="text"  th:field="*{cookieName}" /></p>
+		<p>Description: <input type="text"  th:field="*{cookieDescription}" /></p>
+		<p>Price: <input type="text"  th:field="*{price}" /></p>
+		<p>Remaining Quantiy: <input type="text"  th:field="*{remainingQuantity}" /></p>
+		<p>Quantity Sold: <input type="text"  th:field="*{quantitySold}" /></p>
+		<input type="submit" value="Create New Cookie">
+	</form>
+
+</body>
+</html>

@@ -3,9 +3,24 @@
 <head>
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link th:href="@{/css/style.css}" rel="stylesheet" />
 <title>Login Screen</title>
 </head>
 <body>
+
+
+<!-- begin chris test -->
+	<div class="jumbotron">
+	  <h1 class="display-4">Hello, world!</h1>
+	  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+	  <hr class="my-4">
+	  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+	  <p class="lead">
+	    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+	  </p>
+	</div>
+
+<!-- end -->
 
 	<h1>Customer Login</h1>
 
@@ -40,19 +55,46 @@
 				</div>
 				<div class="modal-body">
 					<form th:action="@{/createUser}" method="post" th:object="${user}" id="createUserForm">
+					
+					  <div class="form-group">
+					    <label for="exampleInputEmail1">Your unang pangalan: </label>
+					    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="So ano nga first name mo?" 
+					    		th:field="*{firstName}">
+					    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+					    
+					    </br>
+					    <label for="exampleInputEmail1">Your huling pangalan: </label>
+					    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="So ano nga first name mo?" 
+					    		th:field="*{lastName}">
+					    <small id="emailHelp" class="form-text text-muted">item 2</small>
+					    
+					    </br>
+					    <label for="exampleInputEmail1">Username oi! </label>
+					    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="characters accepted range from A to B" 
+					    		th:field="*{userName}">
+					    <small id="emailHelp" class="form-text text-muted">username</small>
+					    </br>
+					    
+					    <label for="exampleInputEmail1">password mo?! </label>
+					    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Wag 12345 oi!" 
+					    		th:field="*{password}">
+					    <small id="emailHelp" class="form-text text-muted">password</small>
+					    
+					  </div>
+					
 						
-						<p>
-							First Name: <input type="text" th:field="*{firstName}" />
-						</p>
-						<p>
-							Last Name: <input type="text" th:field="*{lastName}" />
-						</p>
-						<p>
-							Username: <input type="text" th:field="*{userName}" />
-						</p>
-						<p>
-							Password: <input type="text" th:field="*{password}" />
-						</p>
+<!-- 						<p> -->
+<!-- 							First Name: <input type="text" th:field="*{firstName}" /> -->
+<!-- 						</p> -->
+<!-- 						<p> -->
+<!-- 							Last Name: <input type="text" th:field="*{lastName}" /> -->
+<!-- 						</p> -->
+<!-- 						<p> -->
+<!-- 							Username: <input type="text" th:field="*{userName}" /> -->
+<!-- 						</p> -->
+<!-- 						<p> -->
+<!-- 							Password: <input type="text" th:field="*{password}" /> -->
+<!-- 						</p> -->
 					</form>
 				</div>
 				<div class="modal-footer">
@@ -63,7 +105,6 @@
 			</div>
 		</div>
 	</div>
-
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
